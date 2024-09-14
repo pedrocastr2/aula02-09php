@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPW - aula 02/09/24 atividade 02</title>
+    <script type ="text/javascript">
+    function total(){
+     var total = 0;
+     if(document.getElementById("L1").checked){
+        total+=13.50;
+     }
+     if(document.getElementById("L2").checked){
+        total+=54.10;
+     }
+
+     if(document.getElementById("L3").checked){
+        total+=118.70;
+     }
+
+     document.getElementById("total").innerHTML = total.toFixed(2);
+    }
+
+ </script>
+</head>
+<body>
+<h1>Livraria xpto Ltda</h1>
+<h2>livros</h2>
+<form action="https://www.uerj.com.br">
+    <input type="checkbox" id="L1" value="L1" onclick="total();"/> Livro 1 (R$ 13,50)<br>
+    <input type="checkbox" id="L2" value="L2" onclick="total();"/> Livro 2 (R$ 54,10)<br>
+    <input type="checkbox" id="L3" value="L3" onclick="total();"/> Livro 3 (R$ 118,70)<br>
+    <br>total: R$<span id="total">0.00</span><br><br>
+    <input type="submit" value="Comprar">
+</form>
+</body>
+
+
+</html>
